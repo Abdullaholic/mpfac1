@@ -18,6 +18,7 @@ namespace mpfac
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+            //MOHSIN
             
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
