@@ -135,18 +135,19 @@
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.Teal;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.DimGray;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(459, 33);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(150, 123);
             this.button9.TabIndex = 18;
             this.button9.Text = "Approach Parameter";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
