@@ -13,6 +13,8 @@ using System.Device.Location;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
+using System.Data.SqlClient;
+
 
 namespace mpfac
 {
@@ -40,7 +42,6 @@ namespace mpfac
 
         private void map1_MouseMove(object sender, MouseEventArgs e)
         {
-
             var point = map1.FromLocalToLatLng(Convert.ToInt32(e.X), Convert.ToInt32(e.Y));
             double lat = point.Lat;
             double lon = point.Lng;
@@ -62,7 +63,7 @@ namespace mpfac
                     var latgeo = Watcher.Position.Location.Latitude;
                     var longeo = Watcher.Position.Location.Longitude;
                     map1.Position = new PointLatLng(latgeo, longeo);
-                    GMapMarker marker = new GMarkerGoogle(map1.Position, GMarkerGoogleType.blue_dot);
+                    GMapMarker marker = new GMarkerGoogle(map1.Position, GMarkerGoogleType.red_small);
                     marker.ToolTip = new GMapBaloonToolTip(marker);
                     Brush ToolTipBackColor = new SolidBrush(Color.WhiteSmoke);
                     marker.ToolTip.Fill = ToolTipBackColor;
@@ -148,16 +149,35 @@ namespace mpfac
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 objfrmMain = new mpfac.Form2();
-            this.Hide();
-            objfrmMain.Show();
-        }
+            this.Close();
+         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Form2 objfrmMain = new mpfac.Form2();
-            this.Hide();
-            objfrmMain.Show();
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FYP\Visual Studio 2015\Projects\WindowsFormsApplication5\DB\MPSDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\ABDUL\ONEDRIVE\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\MPFAC1\MPFAC\MPSDB.MDF;Integrated Security=True;Connect Timeout=30");
+            String query = "INSERT INTO Navi_Para( target_id,prog_number, tot, tgt_alt, tgt_lat, tgt_lng) VALUES(@tgt, @prog, @tot, @tgt_alt, @tgt_lat, @tgt_lng)";
+
+            SqlCommand command = new SqlCommand(query, con);
+
+
+            command.Parameters.AddWithValue("@tgt", textBox12.Text );
+            command.Parameters.AddWithValue("@prog", textBox16.Text );
+            command.Parameters.AddWithValue("@tot", textBox15.Text );
+            command.Parameters.AddWithValue("@tgt_alt", textBox14.Text );
+            command.Parameters.AddWithValue("@tgt_lat", textcity.Text );
+            command.Parameters.AddWithValue("@tgt_lng", textcountry.Text );
+            try
+            {
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+                this.Close();
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.Message.ToString(), "Error Message");
+            }
         }
 
         private void tab1_Load(object sender, EventArgs e)
