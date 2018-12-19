@@ -13,11 +13,13 @@ namespace mpfac
 {
     public partial class Form2 : Form
     {
+        
         public Form2()
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+            
             
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -80,6 +82,7 @@ namespace mpfac
             recentlabel.Hide();
             recentlist.Hide();
             AbrirForminPanel(new Tabs());
+            
             //mainmenu objfrmMain = new mpfac.mainmenu();
             //this.Hide();
             //objfrmMain.Show();
@@ -138,6 +141,20 @@ namespace mpfac
         private void iconrestore_MouseEnter(object sender, EventArgs e)
         {
             iconrestore.BackColor = Color.CadetBlue;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'mPSDBDataSet1.Mission' table. You can move, or remove it, as needed.
+            this.missionTableAdapter1.Fill(this.mPSDBDataSet1.Mission);
+            // TODO: This line of code loads data into the 'mPSDBDataSet.Mission' table. You can move, or remove it, as needed.
+            this.missionTableAdapter.Fill(this.mPSDBDataSet.Mission);
+
         }
     }
 }

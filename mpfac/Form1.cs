@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+
 namespace mpfac
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
 
 
@@ -48,6 +49,7 @@ namespace mpfac
         {
           if  (txtpass.Text == "PASSWORD")
             {
+                
                 txtpass.Text = "";
                 txtpass.ForeColor = Color.Black;
                 txtpass.UseSystemPasswordChar = true;
@@ -83,7 +85,8 @@ namespace mpfac
         private void btnlogin_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FYP\Visual Studio 2015\Projects\WindowsFormsApplication5\DB\MPSDB.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\FYP\Visual Studio 2015\Projects\WindowsFormsApplication5\DB\MPSDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\USERS\ABDUL\ONEDRIVE\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\MPFAC1\MPFAC\MPSDB.MDF;Integrated Security=True;Connect Timeout=30");
             con.Open();
             string query = "select * from sup where yup = '" + txtuser.Text.Trim() + "'";
             sda = new SqlDataAdapter(query, con);

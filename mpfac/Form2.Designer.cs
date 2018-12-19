@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -52,7 +53,13 @@
             this.ContainerPanel = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.recentlist = new System.Windows.Forms.ListBox();
+            this.missionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mPSDBDataSet = new mpfac.MPSDBDataSet();
             this.recentlabel = new System.Windows.Forms.Label();
+            this.missionTableAdapter = new mpfac.MPSDBDataSetTableAdapters.MissionTableAdapter();
+            this.mPSDBDataSet1 = new mpfac.MPSDBDataSet1();
+            this.missionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.missionTableAdapter1 = new mpfac.MPSDBDataSet1TableAdapters.MissionTableAdapter();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +70,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconcerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
             this.ContainerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.missionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mPSDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mPSDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.missionBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -303,9 +314,9 @@
             this.iconrestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconrestore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconrestore.Image = ((System.Drawing.Image)(resources.GetObject("iconrestore.Image")));
-            this.iconrestore.Location = new System.Drawing.Point(745, 12);
+            this.iconrestore.Location = new System.Drawing.Point(956, 3);
             this.iconrestore.Name = "iconrestore";
-            this.iconrestore.Size = new System.Drawing.Size(20, 20);
+            this.iconrestore.Size = new System.Drawing.Size(40, 47);
             this.iconrestore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconrestore.TabIndex = 2;
             this.iconrestore.TabStop = false;
@@ -319,9 +330,9 @@
             this.iconmini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconmini.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconmini.Image = ((System.Drawing.Image)(resources.GetObject("iconmini.Image")));
-            this.iconmini.Location = new System.Drawing.Point(719, 12);
+            this.iconmini.Location = new System.Drawing.Point(915, 6);
             this.iconmini.Name = "iconmini";
-            this.iconmini.Size = new System.Drawing.Size(20, 20);
+            this.iconmini.Size = new System.Drawing.Size(33, 38);
             this.iconmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconmini.TabIndex = 3;
             this.iconmini.TabStop = false;
@@ -334,9 +345,9 @@
             this.iconmaxi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconmaxi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconmaxi.Image = ((System.Drawing.Image)(resources.GetObject("iconmaxi.Image")));
-            this.iconmaxi.Location = new System.Drawing.Point(745, 12);
+            this.iconmaxi.Location = new System.Drawing.Point(959, 0);
             this.iconmaxi.Name = "iconmaxi";
-            this.iconmaxi.Size = new System.Drawing.Size(20, 20);
+            this.iconmaxi.Size = new System.Drawing.Size(37, 50);
             this.iconmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconmaxi.TabIndex = 2;
             this.iconmaxi.TabStop = false;
@@ -349,9 +360,9 @@
             this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconcerrar.Image = ((System.Drawing.Image)(resources.GetObject("iconcerrar.Image")));
-            this.iconcerrar.Location = new System.Drawing.Point(771, 12);
+            this.iconcerrar.Location = new System.Drawing.Point(1002, 2);
             this.iconcerrar.Name = "iconcerrar";
-            this.iconcerrar.Size = new System.Drawing.Size(26, 20);
+            this.iconcerrar.Size = new System.Drawing.Size(45, 48);
             this.iconcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconcerrar.TabIndex = 1;
             this.iconcerrar.TabStop = false;
@@ -391,17 +402,33 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(373, 27);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // recentlist
             // 
             this.recentlist.BackColor = System.Drawing.SystemColors.Window;
-            this.recentlist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recentlist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.recentlist.DataSource = this.missionBindingSource1;
+            this.recentlist.DisplayMember = "m_name";
+            this.recentlist.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentlist.ForeColor = System.Drawing.Color.DimGray;
             this.recentlist.FormattingEnabled = true;
+            this.recentlist.ItemHeight = 21;
             this.recentlist.Location = new System.Drawing.Point(48, 188);
             this.recentlist.Name = "recentlist";
-            this.recentlist.Size = new System.Drawing.Size(596, 351);
+            this.recentlist.Size = new System.Drawing.Size(596, 338);
             this.recentlist.TabIndex = 5;
+            // 
+            // missionBindingSource
+            // 
+            this.missionBindingSource.DataMember = "Mission";
+            this.missionBindingSource.DataSource = this.mPSDBDataSet;
+            // 
+            // mPSDBDataSet
+            // 
+            this.mPSDBDataSet.CaseSensitive = true;
+            this.mPSDBDataSet.DataSetName = "MPSDBDataSet";
+            this.mPSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // recentlabel
             // 
@@ -409,11 +436,29 @@
             this.recentlabel.BackColor = System.Drawing.SystemColors.Window;
             this.recentlabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentlabel.ForeColor = System.Drawing.Color.DimGray;
-            this.recentlabel.Location = new System.Drawing.Point(43, 139);
+            this.recentlabel.Location = new System.Drawing.Point(43, 143);
             this.recentlabel.Name = "recentlabel";
             this.recentlabel.Size = new System.Drawing.Size(109, 30);
             this.recentlabel.TabIndex = 4;
             this.recentlabel.Text = "Recents";
+            // 
+            // missionTableAdapter
+            // 
+            this.missionTableAdapter.ClearBeforeFill = true;
+            // 
+            // mPSDBDataSet1
+            // 
+            this.mPSDBDataSet1.DataSetName = "MPSDBDataSet1";
+            this.mPSDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // missionBindingSource1
+            // 
+            this.missionBindingSource1.DataMember = "Mission";
+            this.missionBindingSource1.DataSource = this.mPSDBDataSet1;
+            // 
+            // missionTableAdapter1
+            // 
+            this.missionTableAdapter1.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -426,6 +471,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userpic)).EndInit();
@@ -438,6 +484,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
             this.ContainerPanel.ResumeLayout(false);
             this.ContainerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.missionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mPSDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mPSDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.missionBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -468,5 +518,11 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox1;
+        private MPSDBDataSet mPSDBDataSet;
+        private System.Windows.Forms.BindingSource missionBindingSource;
+        private MPSDBDataSetTableAdapters.MissionTableAdapter missionTableAdapter;
+        private MPSDBDataSet1 mPSDBDataSet1;
+        private System.Windows.Forms.BindingSource missionBindingSource1;
+        private MPSDBDataSet1TableAdapters.MissionTableAdapter missionTableAdapter1;
     }
 }

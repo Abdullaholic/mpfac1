@@ -65,7 +65,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuVertical.BackColor = System.Drawing.Color.Green;
             this.MenuVertical.Controls.Add(this.button6);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.button4);
@@ -85,7 +85,7 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DimGray;
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(3, 330);
             this.button6.Name = "button6";
@@ -100,7 +100,7 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DimGray;
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(3, 290);
             this.button5.Name = "button5";
@@ -115,7 +115,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(3, 250);
             this.button4.Name = "button4";
@@ -130,7 +130,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DimGray;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 210);
             this.button3.Name = "button3";
@@ -145,7 +145,7 @@
             this.btnnew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnnew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnew.ForeColor = System.Drawing.Color.DimGray;
+            this.btnnew.ForeColor = System.Drawing.Color.White;
             this.btnnew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnnew.Location = new System.Drawing.Point(3, 170);
             this.btnnew.Name = "btnnew";
@@ -160,7 +160,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 130);
             this.button1.Name = "button1";
@@ -181,7 +181,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.label1);
@@ -189,9 +189,9 @@
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(250, 150);
+            this.panel2.Location = new System.Drawing.Point(250, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1050, 500);
+            this.panel2.Size = new System.Drawing.Size(1050, 596);
             this.panel2.TabIndex = 8;
             // 
             // linkLabel1
@@ -349,9 +349,9 @@
             this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.DimGray;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(46, 12);
+            this.button7.Location = new System.Drawing.Point(46, 7);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 96);
+            this.button7.Size = new System.Drawing.Size(105, 35);
             this.button7.TabIndex = 18;
             this.button7.Text = "Info";
             this.button7.UseVisualStyleBackColor = true;
@@ -369,7 +369,7 @@
             this.menuhorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuhorizontal.Location = new System.Drawing.Point(250, 0);
             this.menuhorizontal.Name = "menuhorizontal";
-            this.menuhorizontal.Size = new System.Drawing.Size(1050, 150);
+            this.menuhorizontal.Size = new System.Drawing.Size(1050, 54);
             this.menuhorizontal.TabIndex = 2;
             // 
             // mainmenu

@@ -67,7 +67,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.MenuVertical.BackColor = System.Drawing.Color.Green;
             this.MenuVertical.Controls.Add(this.button6);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.logoutlabel);
@@ -80,6 +80,7 @@
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.ForeColor = System.Drawing.Color.Transparent;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(250, 650);
@@ -91,7 +92,7 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DimGray;
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(0, 481);
             this.button6.Name = "button6";
@@ -106,7 +107,7 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DimGray;
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(0, 441);
             this.button5.Name = "button5";
@@ -120,8 +121,10 @@
             this.logoutlabel.ActiveLinkColor = System.Drawing.SystemColors.Highlight;
             this.logoutlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutlabel.AutoSize = true;
+            this.logoutlabel.BackColor = System.Drawing.Color.Transparent;
             this.logoutlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutlabel.LinkColor = System.Drawing.Color.DimGray;
+            this.logoutlabel.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutlabel.LinkColor = System.Drawing.Color.Silver;
             this.logoutlabel.Location = new System.Drawing.Point(182, 163);
             this.logoutlabel.Name = "logoutlabel";
             this.logoutlabel.Size = new System.Drawing.Size(65, 21);
@@ -135,7 +138,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 401);
             this.button4.Name = "button4";
@@ -149,6 +152,7 @@
             this.userinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userinfo.AutoSize = true;
             this.userinfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userinfo.ForeColor = System.Drawing.Color.White;
             this.userinfo.Location = new System.Drawing.Point(146, 80);
             this.userinfo.Name = "userinfo";
             this.userinfo.Size = new System.Drawing.Size(101, 21);
@@ -161,7 +165,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DimGray;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 361);
             this.button3.Name = "button3";
@@ -175,8 +179,10 @@
             this.emaillabel.ActiveLinkColor = System.Drawing.SystemColors.Highlight;
             this.emaillabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.emaillabel.AutoSize = true;
+            this.emaillabel.BackColor = System.Drawing.Color.Transparent;
             this.emaillabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emaillabel.LinkColor = System.Drawing.Color.DimGray;
+            this.emaillabel.ForeColor = System.Drawing.Color.Transparent;
+            this.emaillabel.LinkColor = System.Drawing.Color.Silver;
             this.emaillabel.Location = new System.Drawing.Point(110, 101);
             this.emaillabel.Name = "emaillabel";
             this.emaillabel.Size = new System.Drawing.Size(137, 16);
@@ -190,7 +196,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 321);
             this.button2.Name = "button2";
@@ -216,7 +222,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 281);
             this.button1.Name = "button1";

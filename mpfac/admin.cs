@@ -16,6 +16,7 @@ namespace mpfac
         public admin()
         {
             InitializeComponent();
+            MenuVertical.Width = 0;
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

@@ -57,7 +57,7 @@
             // 
             // logo
             // 
-            this.logo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.logo.BackColor = System.Drawing.Color.DarkGreen;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(0, 0);
             this.logo.Name = "logo";
@@ -129,7 +129,7 @@
             this.linkpass.BackColor = System.Drawing.Color.White;
             this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkpass.LinkColor = System.Drawing.Color.DimGray;
-            this.linkpass.Location = new System.Drawing.Point(463, 264);
+            this.linkpass.Location = new System.Drawing.Point(463, 269);
             this.linkpass.Name = "linkpass";
             this.linkpass.Size = new System.Drawing.Size(114, 17);
             this.linkpass.TabIndex = 0;
@@ -139,9 +139,9 @@
             // iconmini
             // 
             this.iconmini.Image = ((System.Drawing.Image)(resources.GetObject("iconmini.Image")));
-            this.iconmini.Location = new System.Drawing.Point(744, 0);
+            this.iconmini.Location = new System.Drawing.Point(715, 6);
             this.iconmini.Name = "iconmini";
-            this.iconmini.Size = new System.Drawing.Size(15, 15);
+            this.iconmini.Size = new System.Drawing.Size(24, 25);
             this.iconmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconmini.TabIndex = 7;
             this.iconmini.TabStop = false;
@@ -152,9 +152,9 @@
             // btncerrar
             // 
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(765, 0);
+            this.btncerrar.Location = new System.Drawing.Point(745, 6);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(15, 15);
+            this.btncerrar.Size = new System.Drawing.Size(29, 25);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btncerrar.TabIndex = 6;
             this.btncerrar.TabStop = false;
